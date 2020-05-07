@@ -1,0 +1,79 @@
+{
+	"name": "eslint-config-nahid",
+	"version": "1.0.0",
+	"description": "Nahid's preferred ESLint and Prettier config",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		".eslintrc.js"
+	],
+	"scripts": {
+		"lint": "concurrently \"npm run lint-js\" \"npm run format\"",
+		"lint:fix": "concurrently \"npm run lint-js:fix\" \"npm run format:fix\"",
+		"lint-js": "eslint \"**/*.js\"",
+		"lint-js:fix": "eslint \"**/*.js\" --fix",
+		"format": "prettier --check \"**/*.{json,md}\"",
+		"format:fix": "prettier --write \"**/*.{json,md}\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nfmohit-wpmudev/eslint-config-nahid.git"
+	},
+	"keywords": [
+		"eslint",
+		"eslint-config",
+		"prettier",
+		"javascript",
+		"ecmascript",
+		"react",
+		"config",
+		"prettier-config",
+		"lint",
+		"formatting"
+	],
+	"author": "Nahid Ferdous Mohit",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/nfmohit-wpmudev/eslint-config-nahid/issues"
+	},
+	"homepage": "https://github.com/nfmohit-wpmudev/eslint-config-nahid#readme",
+	"peerDependencies": {
+		"@wordpress/eslint-plugin": "^5.1.0",
+		"@wordpress/prettier-config": "^0.2.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb": "^18.1.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.3",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^4.0.0",
+		"prettier": "npm:wp-prettier@^1.19.1"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^5.1.0",
+		"@wordpress/prettier-config": "^0.2.0",
+		"concurrently": "^5.2.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb": "^18.1.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.3",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^4.0.0",
+		"husky": "^4.2.5",
+		"lint-staged": "^10.2.2",
+		"prettier": "npm:wp-prettier@^1.19.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": "eslint --fix",
+		"*.{css,scss,sass}": "stylelint --fix",
+		"*.{html,json,md}": "prettier --write"
+	}
+}
