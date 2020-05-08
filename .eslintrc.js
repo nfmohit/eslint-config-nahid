@@ -25,15 +25,7 @@ module.exports = {
 			'error',
 			{
 				...wordpressPrettierConfig,
-				trailingComma: 'none',
-				overrides: [
-					{
-						files: '*.html',
-						options: {
-							parser: 'html'
-						}
-					}
-				]
+				trailingComma: 'none'
 			}
 		],
 		'max-len': [ 'error', 80 ],
