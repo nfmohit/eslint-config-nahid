@@ -1,8 +1,9 @@
 {
 	"name": "eslint-config-nahid",
 	"version": "1.0.0",
-	"description": "Nahid's preferred ESLint and Prettier config",
+	"description": "Nahid's preferred ESLint config.",
 	"main": "index.js",
+	"prettier": "prettier-config-nahid",
 	"files": [
 		"index.js",
 		".eslintrc.js"
@@ -39,7 +40,6 @@
 	"homepage": "https://github.com/nfmohit-wpmudev/eslint-config-nahid#readme",
 	"peerDependencies": {
 		"@wordpress/eslint-plugin": "^5.1.0",
-		"@wordpress/prettier-config": "^0.2.0",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb": "^18.1.0",
 		"eslint-config-prettier": "^6.11.0",
@@ -47,8 +47,7 @@
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-prettier": "^3.1.3",
 		"eslint-plugin-react": "^7.19.0",
-		"eslint-plugin-react-hooks": "^4.0.0",
-		"prettier": "npm:wp-prettier@^1.19.1"
+		"eslint-plugin-react-hooks": "^4.0.0"
 	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "^5.1.0",
@@ -64,7 +63,8 @@
 		"eslint-plugin-react-hooks": "^4.0.0",
 		"husky": "^4.2.5",
 		"lint-staged": "^10.2.2",
-		"prettier": "npm:wp-prettier@^1.19.1"
+		"prettier": "npm:wp-prettier@^1.19.1",
+		"prettier-config-nahid": "^1.0.0"
 	},
 	"husky": {
 		"hooks": {
@@ -73,7 +73,6 @@
 	},
 	"lint-staged": {
 		"*.js": "eslint --fix",
-		"*.{css,scss,sass}": "stylelint --fix",
 		"*.{html,json,md}": "prettier --write"
 	}
 }

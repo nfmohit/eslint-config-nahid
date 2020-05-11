@@ -8,7 +8,7 @@
 /*
  * Dependencies
  */
-const wordpressPrettierConfig = require( '@wordpress/prettier-config' );
+const nahidPrettierConfig = require( 'prettier-config-nahid' );
 
 /*
  * ESLint configuration
@@ -24,8 +24,7 @@ module.exports = {
 		'prettier/prettier': [
 			'error',
 			{
-				...wordpressPrettierConfig,
-				trailingComma: 'none'
+				...nahidPrettierConfig
 			}
 		],
 		'max-len': [ 'error', 80 ],
