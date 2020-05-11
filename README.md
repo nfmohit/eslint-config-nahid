@@ -35,7 +35,7 @@
 
 This object can also be added in your `package.json` file instead under the `eslintConfig` property.
 
-Learn more about using shareable ESLint config [here]("eslintConfig":).
+Learn more about using shareable ESLint config [here](https://eslint.org/docs/developer-guide/shareable-configs).
 
 ## Usage
 
