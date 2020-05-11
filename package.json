@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-nahid",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Nahid's preferred ESLint config.",
 	"main": "index.js",
 	"prettier": "prettier-config-nahid",
