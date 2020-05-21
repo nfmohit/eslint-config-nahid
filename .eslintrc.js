@@ -27,7 +27,14 @@ module.exports = {
 				...nahidPrettierConfig
 			}
 		],
-		'max-len': [ 'error', 80 ],
+		'max-len': [
+			'error',
+			{
+				"code": 80,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true
+			}
+		],
 		'no-console': 'warn',
 		eqeqeq: [ 'error', 'smart' ],
 		"react/jsx-filename-extension": [
