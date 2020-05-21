@@ -29,7 +29,13 @@ module.exports = {
 		],
 		'max-len': [ 'error', 80 ],
 		'no-console': 'warn',
-		eqeqeq: [ 'error', 'smart' ]
+		eqeqeq: [ 'error', 'smart' ],
+		"react/jsx-filename-extension": [
+			'error',
+			{
+				"extensions": [ ".js", ".jsx" ]
+			}
+		]
 	},
 	parserOptions: {
 		ecmaVersion: 2018
