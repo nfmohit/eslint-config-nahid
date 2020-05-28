@@ -42,6 +42,12 @@ module.exports = {
 			{
 				"extensions": [ ".js", ".jsx" ]
 			}
+		],
+		'no-param-reassign': [
+			'error',
+			{
+				'props': false
+			}
 		]
 	},
 	parserOptions: {
